@@ -1,4 +1,4 @@
-[string]$hashfordl="69DD9E1B0C85BA07B7427112A5EC3444B64EE4A2621C35AF8DE2F156DEC7A941"
+[string]$hashfordl="CACAF33D89DEFE0C308FFBB39E1D5730EFFA80941CF845A9C43A3AE57C5F6E67"
 [string]$uris="https://raw.githubusercontent.com/Sharkbyteprojects/Remove-Command-History/master/win/assets/clhist.psm1"
 [string]$instdir=$HOME + "\Documents\WindowsPowerShell\Modules\clhist"
 Write-Output "Installing clhist" "<c>Sharkbyteprojects"
@@ -10,7 +10,7 @@ Write-Output "Downloading"
 Invoke-WebRequest -Uri $uris -OutFile $filepath
 Write-Output "Verify"
 [string]$hashsss=(Get-FileHash -path $filepath -Algorithm "SHA256").Hash
-Write-Output $hashsss
+Write-Output "  SHA256 of Download $($hashsss)"
 if ($hashfordl -eq $hashsss){
     Write-Output "Registring"
     Import-Module "clhist"
@@ -28,11 +28,12 @@ else{
     Write-Warning "Try the Command again"
     return -1
 }
+
 # SIG # Begin signature block
 # MIIFzQYJKoZIhvcNAQcCoIIFvjCCBboCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUHqniHAHVnQu49bBLIRoQMRXF
-# CiegggNXMIIDUzCCAjugAwIBAgIQQWtTFscmBZ9PVH+cVdRhCzANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUTVxQ0aeocapx3GiTftI+9D8I
+# gmigggNXMIIDUzCCAjugAwIBAgIQQWtTFscmBZ9PVH+cVdRhCzANBgkqhkiG9w0B
 # AQsFADArMSkwJwYDVQQDDCBzaGFya2J5dGVwcm9qZWN0c0Bwcm90b25tYWlsLmNv
 # bTAeFw0yMDEwMTAxODMwMzBaFw0yMTEwMTAxODUwMzBaMCsxKTAnBgNVBAMMIHNo
 # YXJrYnl0ZXByb2plY3RzQHByb3Rvbm1haWwuY29tMIIBIjANBgkqhkiG9w0BAQEF
@@ -53,12 +54,12 @@ else{
 # 4DCCAdwCAQEwPzArMSkwJwYDVQQDDCBzaGFya2J5dGVwcm9qZWN0c0Bwcm90b25t
 # YWlsLmNvbQIQQWtTFscmBZ9PVH+cVdRhCzAJBgUrDgMCGgUAoHgwGAYKKwYBBAGC
 # NwIBDDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgor
-# BgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQULwtCEDwo
-# tI1Gg+eLob6S+hSajmkwDQYJKoZIhvcNAQEBBQAEggEAb4Lji3U52OA5ke1wygE2
-# 9gko5Y99EDYW6QY6+lVP1qkC+WtDOU1JbP7tPVyjCWv9bqxwu8zl2euyThMXT9TP
-# jGJpFwJ9upbcf48N8N7TPVKC6C+pBLSn2+WnMr1IFcVkylCh67K7wr6lTGTvtVF+
-# dmPUnO0+R5QKlOzhwQ8JcsRMtu0IOUJZX7WHb+S3aR8vFsI3MziZP0RXTU8UcrB0
-# bKRk+kTPknAV7L/b+gl92zny1eXfrLuKGZVLk3OlmgTSQbuxw+l4cIyHSTp9Awgg
-# VymSKDmFVJuQlLpUia5WDUxVQiFppbZ75ImMdwtjhE8brB5z8/5IgpW5ImWeR9Sz
-# mg==
+# BgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQUSMgSmqH8
+# HJmKT8wn5YOBsWSEpv8wDQYJKoZIhvcNAQEBBQAEggEAg9zAjzrwDQrC3eU3ayr1
+# e/RirR7ZEGb5LuROzJZFhHQS4K6SvFAu/0bY0JG3HkMdKCHV2/0zs/uJb6x6EPy1
+# hb5lZwqoeLyTM4sRvHTBG4BLuJbDgrp6EJmQH0aLOElzQVueffpU86IdUb7wW7Vs
+# hWHiklqtzlOoPbSlzClLo50P7P+2fY65o3cl6cdj+i838jrmRFzHRSkfQ3pez4pH
+# YUuzQEM5JpCsMFIssZCTvF5n3/KRsVFkPfv2DGrX8tWpV5GAbfHZEmeckoyLFZVo
+# Ijpz4DE8RTBmVXMP8eahE8rmYfPX3BRWyPBgN8OjtOC4YbU/ErqHiUPZXD8ea5RK
+# Cg==
 # SIG # End signature block
