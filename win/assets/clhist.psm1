@@ -1,3 +1,9 @@
+<#
+.Synopsis
+  "Delete Persistant History"
+.Description
+	Delete Complete History
+#>
 function clhist{
     [string]$filepath=(Get-PSReadlineOption).HistorySavePath
     [string]$warn="File dosn't Exist!"
